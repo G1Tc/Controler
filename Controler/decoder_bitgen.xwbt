@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Controler\Controler\decoder.ncd
+OUTFILE=D:\Controler\Controler\decoder.bit
+FAMILY=Spartan3E
+PART=xc3s100e-5cp132
+WORKINGDIR=D:\Controler\Controler
+LICENSE=WebPack
+USER_INFO=212060035_0_0_319
