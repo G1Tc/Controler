@@ -3,7 +3,9 @@
 module decoder(
     input [31:0] instruction,
     output reg [1:0] instr_type,
-    output reg [2:0] data_instr_type
+    output reg [2:0] data_instr_type,
+    output reg [1:0] mem_inst_type,
+    output reg [1:0] jmp_instr_type
     );
 
     always @(*) begin
@@ -19,10 +21,19 @@ module decoder(
 
 		01: instr_type=2'b10; //Memory type
 
-		10: instr_type=2'b11; //branch
+		10: begin 
+			instr_type=2'b11; //branch
+			jmp_instr_type = instruction[25] && !instruction[24] ? 2'b01 : 
+				instruction[25] && instruction[24] ? 2'b10 : 2'b00;
+		end
 
 	    	default: instr_type=2'b00; // not indentifiable
 	endcase
+
+	mem_inst_type = data_instr_type == 1 ? 1 : 
+		data_instr_type == 2 ? 2 : 0;
+
+
 
 
    end 

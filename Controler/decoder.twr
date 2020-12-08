@@ -40,53 +40,57 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Setup/Hold to clock instruction<26>
----------------+------------+------------+-----------------------+--------+
-               |Max Setup to|Max Hold to |                       | Clock  |
-Source         | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
----------------+------------+------------+-----------------------+--------+
-instruction<4> |    1.131(R)|    0.284(R)|data_instr_type_not0001|   0.000|
-instruction<25>|    3.105(R)|    0.591(R)|data_instr_type_not0001|   0.000|
----------------+------------+------------+-----------------------+--------+
+---------------+------------+------------+-----------------------------+--------+
+               |Max Setup to|Max Hold to |                             | Clock  |
+Source         | clk (edge) | clk (edge) |Internal Clock(s)            | Phase  |
+---------------+------------+------------+-----------------------------+--------+
+instruction<4> |    0.109(R)|    2.156(R)|old_data_instr_type_2_not0001|   0.000|
+instruction<25>|    2.252(R)|    2.265(R)|old_data_instr_type_2_not0001|   0.000|
+---------------+------------+------------+-----------------------------+--------+
 
 Setup/Hold to clock instruction<27>
----------------+------------+------------+-----------------------+--------+
-               |Max Setup to|Max Hold to |                       | Clock  |
-Source         | clk (edge) | clk (edge) |Internal Clock(s)      | Phase  |
----------------+------------+------------+-----------------------+--------+
-instruction<4> |    0.883(R)|    0.594(R)|data_instr_type_not0001|   0.000|
-instruction<25>|    2.857(R)|    0.901(R)|data_instr_type_not0001|   0.000|
----------------+------------+------------+-----------------------+--------+
+---------------+------------+------------+-----------------------------+--------+
+               |Max Setup to|Max Hold to |                             | Clock  |
+Source         | clk (edge) | clk (edge) |Internal Clock(s)            | Phase  |
+---------------+------------+------------+-----------------------------+--------+
+instruction<4> |    0.393(R)|    1.801(R)|old_data_instr_type_2_not0001|   0.000|
+instruction<25>|    2.536(R)|    1.910(R)|old_data_instr_type_2_not0001|   0.000|
+---------------+------------+------------+-----------------------------+--------+
 
 Clock instruction<26> to Pad
-------------------+------------+-----------------------+--------+
-                  | clk (edge) |                       | Clock  |
-Destination       |   to PAD   |Internal Clock(s)      | Phase  |
-------------------+------------+-----------------------+--------+
-data_instr_type<0>|    6.850(R)|data_instr_type_not0001|   0.000|
-data_instr_type<1>|    5.810(R)|data_instr_type_not0001|   0.000|
-------------------+------------+-----------------------+--------+
+------------------+------------+-----------------------------+--------+
+                  | clk (edge) |                             | Clock  |
+Destination       |   to PAD   |Internal Clock(s)            | Phase  |
+------------------+------------+-----------------------------+--------+
+data_instr_type<0>|    8.622(R)|old_data_instr_type_2_not0001|   0.000|
+data_instr_type<1>|    6.880(R)|old_data_instr_type_2_not0001|   0.000|
+mem_inst_type<0>  |    9.299(R)|old_data_instr_type_2_not0001|   0.000|
+mem_inst_type<1>  |    8.798(R)|old_data_instr_type_2_not0001|   0.000|
+------------------+------------+-----------------------------+--------+
 
 Clock instruction<27> to Pad
-------------------+------------+-----------------------+--------+
-                  | clk (edge) |                       | Clock  |
-Destination       |   to PAD   |Internal Clock(s)      | Phase  |
-------------------+------------+-----------------------+--------+
-data_instr_type<0>|    7.160(R)|data_instr_type_not0001|   0.000|
-data_instr_type<1>|    6.120(R)|data_instr_type_not0001|   0.000|
-------------------+------------+-----------------------+--------+
+------------------+------------+-----------------------------+--------+
+                  | clk (edge) |                             | Clock  |
+Destination       |   to PAD   |Internal Clock(s)            | Phase  |
+------------------+------------+-----------------------------+--------+
+data_instr_type<0>|    8.267(R)|old_data_instr_type_2_not0001|   0.000|
+data_instr_type<1>|    6.525(R)|old_data_instr_type_2_not0001|   0.000|
+mem_inst_type<0>  |    8.944(R)|old_data_instr_type_2_not0001|   0.000|
+mem_inst_type<1>  |    8.443(R)|old_data_instr_type_2_not0001|   0.000|
+------------------+------------+-----------------------------+--------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-instruction<26>|instr_type<0>  |    5.582|
-instruction<26>|instr_type<1>  |    5.776|
-instruction<27>|instr_type<0>  |    5.840|
-instruction<27>|instr_type<1>  |    6.219|
+instruction<26>|instr_type<0>  |    5.916|
+instruction<26>|instr_type<1>  |    5.966|
+instruction<27>|instr_type<0>  |    5.595|
+instruction<27>|instr_type<1>  |    5.824|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Dec 07 02:44:30 2020 
+Analysis completed Tue Dec 08 00:29:14 2020 
 --------------------------------------------------------------------------------
 
 Trace Settings:

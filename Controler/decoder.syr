@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: decoder.prj
 
@@ -134,7 +134,8 @@ Synthesizing Unit <decoder>.
 WARNING:Xst:647 - Input <instruction<31:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <instruction<23:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <instruction<3:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:737 - Found 3-bit latch for signal <data_instr_type>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:1306 - Output <jmp_instr_type> is never assigned.
+WARNING:Xst:737 - Found 3-bit latch for signal <$old_data_instr_type_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 Unit <decoder> synthesized.
 
 
@@ -165,13 +166,15 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <data_instr_type_2> (without init value) has a constant value of 0 in block <decoder>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <_old_data_instr_type_2_2> (without init value) has a constant value of 0 in block <decoder>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <decoder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block decoder, actual ratio is 0.
+Latch _old_data_instr_type_2_1 has been replicated 1 time(s) to handle iob=true attribute.
+Latch _old_data_instr_type_2_0 has been replicated 1 time(s) to handle iob=true attribute.
 
 Final Macro Processing ...
 
@@ -203,17 +206,17 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 37
+# IOs                              : 41
 
 Cell Usage :
-# BELS                             : 5
+# BELS                             : 7
 #      GND                         : 1
-#      LUT2                        : 4
-# FlipFlops/Latches                : 2
-#      LD_1                        : 2
-# IO Buffers                       : 9
+#      LUT2                        : 6
+# FlipFlops/Latches                : 4
+#      LD_1                        : 4
+# IO Buffers                       : 11
 #      IBUF                        : 4
-#      OBUF                        : 5
+#      OBUF                        : 7
 =========================================================================
 
 Device utilization summary:
@@ -221,10 +224,11 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                        2  out of    960     0%  
- Number of 4 input LUTs:                  4  out of   1920     0%  
- Number of IOs:                          37
- Number of bonded IOBs:                   9  out of     83    10%  
+ Number of Slices:                        3  out of    960     0%  
+ Number of Slice Flip Flops:              2  out of   1920     0%  
+ Number of 4 input LUTs:                  6  out of   1920     0%  
+ Number of IOs:                          41
+ Number of bonded IOBs:                  11  out of     83    13%  
     IOB Flip Flops:                       2
 
 ---------------------------
@@ -245,11 +249,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
----------------------------------------------------+---------------------------+-------+
-Clock Signal                                       | Clock buffer(FF name)     | Load  |
----------------------------------------------------+---------------------------+-------+
-data_instr_type_not0001(data_instr_type_not00011:O)| NONE(*)(data_instr_type_0)| 2     |
----------------------------------------------------+---------------------------+-------+
+---------------------------------------------------------------+----------------------------------+-------+
+Clock Signal                                                   | Clock buffer(FF name)            | Load  |
+---------------------------------------------------------------+----------------------------------+-------+
+old_data_instr_type_2_not0001(old_data_instr_type_2_not00011:O)| NONE(*)(_old_data_instr_type_2_0)| 4     |
+---------------------------------------------------------------+----------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -264,8 +268,8 @@ Timing Summary:
 Speed Grade: -5
 
    Minimum period: No path found
-   Minimum input arrival time before clock: 2.518ns
-   Maximum output required time after clock: 4.114ns
+   Minimum input arrival time before clock: 2.589ns
+   Maximum output required time after clock: 5.258ns
    Maximum combinational path delay: 5.847ns
 
 Timing Detail:
@@ -273,43 +277,44 @@ Timing Detail:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'data_instr_type_not0001'
-  Total number of paths / destination ports: 3 / 2
+Timing constraint: Default OFFSET IN BEFORE for Clock 'old_data_instr_type_2_not0001'
+  Total number of paths / destination ports: 6 / 4
 -------------------------------------------------------------------------
-Offset:              2.518ns (Levels of Logic = 2)
+Offset:              2.589ns (Levels of Logic = 2)
   Source:            instruction<25> (PAD)
-  Destination:       data_instr_type_1 (LATCH)
-  Destination Clock: data_instr_type_not0001 rising
+  Destination:       _old_data_instr_type_2_1 (LATCH)
+  Destination Clock: old_data_instr_type_2_not0001 rising
 
-  Data Path: instruction<25> to data_instr_type_1
+  Data Path: instruction<25> to _old_data_instr_type_2_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.106   0.532  instruction_25_IBUF (instruction_25_IBUF)
-     LUT2:I0->O            1   0.612   0.000  data_instr_type_mux0000<1>1 (data_instr_type_mux0000<1>)
-     LD_1:D                    0.268          data_instr_type_1
+     IBUF:I->O             3   1.106   0.603  instruction_25_IBUF (instruction_25_IBUF)
+     LUT2:I0->O            2   0.612   0.000  old_data_instr_type_2_mux0000<1>1 (old_data_instr_type_2_mux0000<1>)
+     LD_1:D                    0.268          _old_data_instr_type_2_1
     ----------------------------------------
-    Total                      2.518ns (1.986ns logic, 0.532ns route)
-                                       (78.9% logic, 21.1% route)
+    Total                      2.589ns (1.986ns logic, 0.603ns route)
+                                       (76.7% logic, 23.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'data_instr_type_not0001'
-  Total number of paths / destination ports: 2 / 2
+Timing constraint: Default OFFSET OUT AFTER for Clock 'old_data_instr_type_2_not0001'
+  Total number of paths / destination ports: 6 / 4
 -------------------------------------------------------------------------
-Offset:              4.114ns (Levels of Logic = 1)
-  Source:            data_instr_type_1 (LATCH)
-  Destination:       data_instr_type<1> (PAD)
-  Source Clock:      data_instr_type_not0001 rising
+Offset:              5.258ns (Levels of Logic = 2)
+  Source:            _old_data_instr_type_2_0 (LATCH)
+  Destination:       mem_inst_type<1> (PAD)
+  Source Clock:      old_data_instr_type_2_not0001 rising
 
-  Data Path: data_instr_type_1 to data_instr_type<1>
+  Data Path: _old_data_instr_type_2_0 to mem_inst_type<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD_1:G->Q             1   0.588   0.357  data_instr_type_1 (data_instr_type_1)
-     OBUF:I->O                 3.169          data_instr_type_1_OBUF (data_instr_type<1>)
+     LD_1:G->Q             2   0.588   0.532  _old_data_instr_type_2_0 (_old_data_instr_type_2_0)
+     LUT2:I0->O            1   0.612   0.357  mem_inst_type_cmp_eq00011 (mem_inst_type_1_OBUF)
+     OBUF:I->O                 3.169          mem_inst_type_1_OBUF (mem_inst_type<1>)
     ----------------------------------------
-    Total                      4.114ns (3.757ns logic, 0.357ns route)
-                                       (91.3% logic, 8.7% route)
+    Total                      5.258ns (4.369ns logic, 0.889ns route)
+                                       (83.1% logic, 16.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -334,13 +339,13 @@ Delay:               5.847ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.38 secs
+Total CPU time to Xst completion: 5.63 secs
  
 --> 
 
-Total memory usage is 4518604 kilobytes
+Total memory usage is 4502732 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
 Number of infos    :    1 (   0 filtered)
 

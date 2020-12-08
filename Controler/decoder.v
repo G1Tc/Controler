@@ -23,7 +23,7 @@ module decoder(
 
 		10: begin 
 			instr_type=2'b11; //branch
-			jmp_instr_type = instruction[25] && !instruction[25] ? 2'b01 : 
+			jmp_instr_type = instruction[25] && !instruction[24] ? 2'b01 : 
 				instruction[25] && instruction[24] ? 2'b10 : 2'b00;
 		end
 
