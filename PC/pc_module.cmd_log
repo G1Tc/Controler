@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "D:/Controler/PC/pc_module.xst" -ofn "D:/Controler/PC/pc_module.syr" 
+xst -intstyle ise -ifn "D:/Controler/PC/pc_module.xst" -ofn "D:/Controler/PC/pc_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 pc_module.ngc pc_module.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o pc_module_map.ncd pc_module.ngd pc_module.pcf 
+par -w -intstyle ise -ol high -t 1 pc_module_map.ncd pc_module.ncd pc_module.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml pc_module.twx pc_module.ncd -o pc_module.twr pc_module.pcf 
