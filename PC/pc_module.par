@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-server2019::  Sun Dec 13 11:33:48 2020
+server2019::  Sun Dec 13 12:39:26 2020
 
 par -w -intstyle ise -ol high -t 1 pc_module_map.ncd pc_module.ncd
 pc_module.pcf 
@@ -85,19 +85,19 @@ Phase 8.5  Local Placement Optimization (Checksum:46ed1150) REAL time: 1 secs
 
 Phase 9.8  Global Placement
 ..
-Phase 9.8  Global Placement (Checksum:9a32d600) REAL time: 3 secs 
+Phase 9.8  Global Placement (Checksum:9a3af3af) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:9a32d600) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:9a3af3af) REAL time: 3 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:9ab79ed6) REAL time: 3 secs 
+Phase 11.18  Placement Optimization (Checksum:9b6efe92) REAL time: 3 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:9ab79ed6) REAL time: 3 secs 
+Phase 12.5  Local Placement Optimization (Checksum:9b6efe92) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
-Total CPU  time to Placer completion: 3 secs 
+Total CPU  time to Placer completion: 2 secs 
 Writing design to file pc_module.ncd
 
 
@@ -105,13 +105,13 @@ Writing design to file pc_module.ncd
 Starting Router
 
 
-Phase  1  : 112 unrouted;      REAL time: 3 secs 
+Phase  1  : 112 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 104 unrouted;      REAL time: 3 secs 
+Phase  2  : 104 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 18 unrouted;      REAL time: 3 secs 
+Phase  3  : 18 unrouted;      REAL time: 4 secs 
 
-Phase  4  : 26 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
+Phase  4  : 24 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 4 secs 
 
@@ -146,7 +146,7 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X2Y10| No   |    7 |  0.003     |  0.039      |
+|           clk_BUFGP | BUFGMUX_X2Y10| No   |    7 |  0.001     |  0.039      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -167,7 +167,7 @@ Asterisk (*) preceding a constraint indicates it was not met.
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
   Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.901ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     1.278ns|            |       0|           0
+  _BUFGP                                    | HOLD        |     1.273ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -186,7 +186,7 @@ All signals are completely routed.
 Total REAL time to PAR completion: 4 secs 
 Total CPU time to PAR completion: 4 secs 
 
-Peak Memory Usage:  4459 MB
+Peak Memory Usage:  4467 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.

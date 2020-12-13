@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: pc_module.prj
 
@@ -133,7 +133,7 @@ Synthesizing Unit <pc_module>.
     Related source file is "pc_module.v".
     Found 8-bit register for signal <pc_out>.
     Found 8-bit adder for signal <r15>.
-    Found 8-bit adder for signal <mux$addsub0000> created at line 16.
+    Found 8-bit adder for signal <mux_in$addsub0000> created at line 16.
     Summary:
 	inferred   8 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
@@ -301,9 +301,9 @@ Delay:               3.344ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               9   0.514   0.700  pc_out_5 (pc_out_5)
-     LUT4:I3->O            1   0.612   0.000  mux<7>_SW0_SW1_F (N15)
-     MUXF5:I0->O           1   0.278   0.360  mux<7>_SW0_SW1 (N13)
-     LUT4:I3->O            1   0.612   0.000  mux<7> (mux<7>)
+     LUT4:I3->O            1   0.612   0.000  mux_in<7>_SW0_SW1_F (N15)
+     MUXF5:I0->O           1   0.278   0.360  mux_in<7>_SW0_SW1 (N13)
+     LUT4:I3->O            1   0.612   0.000  mux_in<7> (mux_in<7>)
      FD:D                      0.268          pc_out_7
     ----------------------------------------
     Total                      3.344ns (2.284ns logic, 1.060ns route)
@@ -323,9 +323,9 @@ Offset:              4.205ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            12   1.106   0.969  sel_IBUF (sel_IBUF)
-     LUT4:I0->O            1   0.612   0.000  mux<7>_SW0_SW1_F (N15)
-     MUXF5:I0->O           1   0.278   0.360  mux<7>_SW0_SW1 (N13)
-     LUT4:I3->O            1   0.612   0.000  mux<7> (mux<7>)
+     LUT4:I0->O            1   0.612   0.000  mux_in<7>_SW0_SW1_F (N15)
+     MUXF5:I0->O           1   0.278   0.360  mux_in<7>_SW0_SW1 (N13)
+     LUT4:I3->O            1   0.612   0.000  mux_in<7> (mux_in<7>)
      FD:D                      0.268          pc_out_7
     ----------------------------------------
     Total                      4.205ns (2.876ns logic, 1.329ns route)
@@ -356,11 +356,11 @@ Offset:              6.603ns (Levels of Logic = 3)
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 5.45 secs
+Total CPU time to Xst completion: 5.22 secs
  
 --> 
 
-Total memory usage is 4503960 kilobytes
+Total memory usage is 4519512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
