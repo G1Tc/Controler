@@ -5,8 +5,8 @@ module alu_module(
     input [31:0] B,
     input [1:0] OP,
     input [3:0] cmd,
-    output [3:0] flags,
-    output [31:0] out
+    output reg [3:0] flags,
+    output reg [31:0] out
     );
 
     always @(*) begin
@@ -28,7 +28,27 @@ module alu_module(
 
 	flags[3] = out[31];	// N flag
 	flags[2] = out ? 0 : 1;	// Z flag
-	flagg[1] = 
+	
+	if (cmd==0 | cmd==10) begin 
+		flags[1] = A < B ? 1 : 0;
+		flags[0] = (A[31]!=B[31] && B[31]!=out[31]) ? 1 : 0;
+	end
+
+	else if(cmd==3) begin 
+		flags[1] = A > B ? 1 : 0;
+		flags[0] = (A[31]!=B[31] && B[31]!=out[31]) ? 1 : 0;	
+	end
+	
+	else if(cmd==4) begin 
+		flags[1] = (A>out || out<B) ? 1 : 0;
+		flags[0] = (A[31]==B[31] && A[31]!=out[31]) ? 1 : 0;	
+	end
+
+	else begin
+	flags[1]=0;
+	flags[0]=0;
+	end
+	
 
     end
 
