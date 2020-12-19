@@ -1,1 +1,4 @@
 xst -intstyle ise -ifn "D:/compe475/Controler/ALU/alu_module.xst" -ofn "D:/compe475/Controler/ALU/alu_module.syr" 
+xst -intstyle ise -ifn "D:/compe475/Controler/ALU/alu_module.xst" -ofn "D:/compe475/Controler/ALU/alu_module.syr" 
+xst -intstyle ise -ifn "D:/compe475/Controler/ALU/alu_module.xst" -ofn "D:/compe475/Controler/ALU/alu_module.syr" 
+xst -intstyle ise -ifn "D:/compe475/Controler/ALU/alu_module.xst" -ofn "D:/compe475/Controler/ALU/alu_module.syr" 
