@@ -22,66 +22,50 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ALU.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
-    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="alu_module.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="alu_module.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="alu_module.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="alu_module.ngc"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="alu_module.ngd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="alu_module.ngr"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="alu_module.pcf" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="alu_module.prj"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="alu_module.stx"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="alu_module.syr"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="alu_module.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="alu_module_map.map" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="alu_module_map.mrp" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="alu_module_map.ncd" xil_pn:subbranch="Map"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="alu_module_map.ngm" xil_pn:subbranch="Map"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_module_map.xrpt"/>
-    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_module_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="alu_module_summary.html"/>
-    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="alu_module_summary.xml"/>
-    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="alu_module_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="alu_module_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1608365959">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-946072948080841504" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-946072948080841504" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7562051964646715702" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-7562051964646715702" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6850782871940840734" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6850782871940840734" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1608083233">
+    <transform xil_pn:end_ts="1608365959" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5673650951126095444" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1608083233" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="5673650951126095444" xil_pn:start_ts="1608083233">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1608083282" xil_pn:in_ck="5073563407553337067" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="1960965195517356765" xil_pn:start_ts="1608083272">
+    <transform xil_pn:end_ts="1608365986" xil_pn:in_ck="5073563407553337067" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-3242098765724225455" xil_pn:start_ts="1608365959">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -96,32 +80,6 @@
       <outfile xil_pn:name="alu_module_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
-    </transform>
-    <transform xil_pn:end_ts="1608083330" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8767104432327394505" xil_pn:start_ts="1608083330">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1608083337" xil_pn:in_ck="-8912671287281424051" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-3116684720373855667" xil_pn:start_ts="1608083330">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="alu_module.bld"/>
-      <outfile xil_pn:name="alu_module.ngd"/>
-      <outfile xil_pn:name="alu_module_ngdbuild.xrpt"/>
-    </transform>
-    <transform xil_pn:end_ts="1608083344" xil_pn:in_ck="-8912671287281424050" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1608083337">
-      <status xil_pn:value="FailedRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="alu_module.pcf"/>
-      <outfile xil_pn:name="alu_module_map.map"/>
-      <outfile xil_pn:name="alu_module_map.mrp"/>
-      <outfile xil_pn:name="alu_module_map.ncd"/>
-      <outfile xil_pn:name="alu_module_map.ngm"/>
-      <outfile xil_pn:name="alu_module_map.xrpt"/>
-      <outfile xil_pn:name="alu_module_summary.xml"/>
-      <outfile xil_pn:name="alu_module_usage.xml"/>
     </transform>
   </transforms>
 

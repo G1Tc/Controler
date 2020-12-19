@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-12-16T01:49:23</DateModified>
+  <DateModified>2020-12-19T08:10:21</DateModified>
   <ModuleName>alu_module</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/Controler/ALU/iseconfig/alu_module.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/Controler/ALU\</ImplementationReportsDirectory>
-  <DateInitialized>2020-12-15T01:16:16</DateInitialized>
+  <SavedFilePath>D:/compe475/Controler/ALU/iseconfig/alu_module.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/compe475/Controler/ALU</ImplementationReportsDirectory>
+  <DateInitialized>2020-12-19T08:10:21</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
